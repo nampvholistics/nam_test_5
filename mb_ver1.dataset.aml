@@ -5,7 +5,7 @@ import './public_user_roles.model.aml' {
   public_user_roles as model__public_user_roles
 }
 
-Dataset mb_ver1 {
+Dataset mb_ver2 {
   label: 'Mb Ver1'
   description: ''
   data_source_name: 'motorbike'
