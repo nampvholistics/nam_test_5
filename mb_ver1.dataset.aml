@@ -1,0 +1,19 @@
+import './public_transactions.model.aml' {
+  public_transactions as model__public_transactions
+}
+import './public_motorbikes.model.aml' {
+  public_motorbikes as model__public_motorbikes
+}
+
+Dataset mb_ver1 {
+  label: 'Mb Ver1'
+  description: ''
+  data_source_name: 'motorbike'
+  models: [
+    model__public_transactions,
+    model__public_motorbikes
+  ]
+  relationships: [
+  ]
+  owner: 'nam+onboarding@domain.com'
+}
