@@ -1,0 +1,75 @@
+Model public_motorbikes {
+  type: 'table'
+  label: 'Motorbikes'
+  description: ''
+  data_source_name: 'motorbike'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension contact_info {
+    label: 'Contact Info'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.contact_info }};;
+  }
+  dimension cost {
+    label: 'Cost'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.cost }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension description {
+    label: 'Description'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.description }};;
+  }
+  dimension duration_day {
+    label: 'Duration Day'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.duration_day }};;
+  }
+  dimension file_path {
+    label: 'File Path'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.file_path }};;
+  }
+  dimension status {
+    label: 'Status'
+    type: 'truefalse'
+    hidden: false
+    definition: @sql {{ #SOURCE.status }};;
+  }
+  dimension title {
+    label: 'Title'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.title }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+  dimension user_id {
+    label: 'User Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.user_id }};;
+  }
+
+  owner: 'nam+onboarding@domain.com'
+  table_name: '"public"."motorbikes"'
+}

@@ -1,0 +1,153 @@
+Model public_users_account {
+  type: 'table'
+  label: 'Users Account'
+  description: ''
+  data_source_name: 'motorbike'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension activate_token {
+    label: 'Activate Token'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.activate_token }};;
+  }
+  dimension active_status {
+    label: 'Active Status'
+    type: 'truefalse'
+    hidden: false
+    definition: @sql {{ #SOURCE.active_status }};;
+  }
+  dimension address {
+    label: 'Address'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.address }};;
+  }
+  dimension affiliate {
+    label: 'Affiliate'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.affiliate }};;
+  }
+  dimension authorization_token {
+    label: 'Authorization Token'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.authorization_token }};;
+  }
+  dimension avatar {
+    label: 'Avatar'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.avatar }};;
+  }
+  dimension birthday {
+    label: 'Birthday'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.birthday }};;
+  }
+  dimension email {
+    label: 'Email'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.email }};;
+  }
+  dimension expire_authorization {
+    label: 'Expire Authorization'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.expire_authorization }};;
+  }
+  dimension facebook_url {
+    label: 'Facebook Url'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.facebook_url }};;
+  }
+  dimension full_name {
+    label: 'Full Name'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.full_name }};;
+  }
+  dimension gender {
+    label: 'Gender'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.gender }};;
+  }
+  dimension gpa {
+    label: 'Gpa'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.gpa }};;
+  }
+  dimension grade {
+    label: 'Grade'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.grade }};;
+  }
+  dimension password {
+    label: 'Password'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.password }};;
+  }
+  dimension phone {
+    label: 'Phone'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.phone }};;
+  }
+  dimension reset_password_code {
+    label: 'Reset Password Code'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.reset_password_code }};;
+  }
+  dimension status {
+    label: 'Status'
+    type: 'truefalse'
+    hidden: false
+    definition: @sql {{ #SOURCE.status }};;
+  }
+  dimension username {
+    label: 'Username'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.username }};;
+  }
+  dimension can_crud {
+    label: 'Can Crud'
+    type: 'truefalse'
+    hidden: false
+    definition: @sql {{ #SOURCE.can_crud }};;
+  }
+  dimension is_request_payment {
+    label: 'Is Request Payment'
+    type: 'truefalse'
+    hidden: false
+    definition: @sql {{ #SOURCE.is_request_payment }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+
+  owner: 'nam+onboarding@domain.com'
+  table_name: '"public"."users_account"'
+}

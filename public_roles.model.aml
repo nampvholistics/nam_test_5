@@ -1,0 +1,21 @@
+Model public_roles {
+  type: 'table'
+  label: 'Roles'
+  description: ''
+  data_source_name: 'motorbike'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension user_role {
+    label: 'User Role'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.user_role }};;
+  }
+
+  owner: 'nam+onboarding@domain.com'
+  table_name: '"public"."roles"'
+}

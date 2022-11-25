@@ -1,0 +1,33 @@
+Model public_refresh_token {
+  type: 'table'
+  label: 'Refresh Token'
+  description: ''
+  data_source_name: 'motorbike'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension expiry_date {
+    label: 'Expiry Date'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.expiry_date }};;
+  }
+  dimension token {
+    label: 'Token'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.token }};;
+  }
+  dimension user_id {
+    label: 'User Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.user_id }};;
+  }
+
+  owner: 'nam+onboarding@domain.com'
+  table_name: '"public"."refresh_token"'
+}

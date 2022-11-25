@@ -1,0 +1,39 @@
+Model public_transactions {
+  type: 'table'
+  label: 'Transactions'
+  description: ''
+  data_source_name: 'motorbike'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension transaction_number {
+    label: 'Transaction Number'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.transaction_number }};;
+  }
+  dimension user_id {
+    label: 'User Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.user_id }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+
+  owner: 'nam+onboarding@domain.com'
+  table_name: '"public"."transactions"'
+}
